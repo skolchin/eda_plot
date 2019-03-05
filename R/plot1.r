@@ -10,7 +10,7 @@ rdata <- read_delim(
   delim = ";",
   col_types = cols(
     col_date(format = "%d/%m/%Y"),
-    col_time(),
+    col_time(format = "%H:%M:%S"),
     col_double(), 
     col_double(),
     col_double(),

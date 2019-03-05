@@ -1,6 +1,6 @@
 #
 # Coursera Explanatory Data Analysis week 1 assignment
-# Plot 2. Global active power by date/time
+# Plot 3. Energy by date time divided by sub metering
 #
 library(readr)
 
@@ -29,14 +29,37 @@ dd$DateTime <- as.POSIXct(
   format = "%Y-%m-%d %H:%M:%S"
 )
 
-# Make a plot and save it to a PNG file
-png(filename = "figure/plot2.png", width = 480, height = 480)
+# Open up a PNG file
+png(filename = "plot3.png", width = 480, height = 480)
+
+# Make the plot
 with(
   dd,
-  plot(DateTime, Global_active_power, 
+  plot(DateTime, Sub_metering_1, 
        xlab = "",
-       ylab = "Global active power (kilowatts)",
-       type = "l"
+       ylab = "Energy sub metering",
+       type = "l",
+       col = "dark gray"
        )
 )
+with(
+  dd,
+  points(DateTime, Sub_metering_2, 
+       type = "l",
+       col = "red"
+  )
+)
+with(
+  dd,
+  points(DateTime, Sub_metering_3, 
+       type = "l",
+       col = "blue"
+  )
+)
+legend("topright",
+       lty = 1,
+       col = c("dark gray", "red", "blue"),
+       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+
+# Close the file
 dev.off()

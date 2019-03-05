@@ -22,8 +22,10 @@ rdata <- read_delim(
   na = c("", "NA", "?")
   )
 
-# Make a histogram and save it to a PNG file
-png(filename = "figure/plot1.png", width = 480, height = 480)
+# Open up a PNG file
+png(filename = "plot1.png", width = 480, height = 480)
+
+# Make a histogram
 with(
   subset(rdata, Date >= "2007/02/01" & Date <= "2007/02/02"),
   hist(Global_active_power, 
@@ -32,4 +34,6 @@ with(
        col = "red"
        )
 )
+
+# Close the file
 dev.off()

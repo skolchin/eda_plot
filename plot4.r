@@ -32,7 +32,7 @@ dd$DateTime <- as.POSIXct(
 )
 
 # Open up a PNG file
-png(filename = "figure/plot4.png", width = 480, height = 480)
+png(filename = "plot4.png", width = 480, height = 480)
 
 # Set up plot parameters
 par(mfrow = c(2,2))

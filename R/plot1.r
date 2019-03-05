@@ -1,6 +1,6 @@
 #
 # Coursera Explanatory Data Analysis week 1 assignment
-# Plot 1. Global active power vs Frequence histogramm.
+# Plot 1. Global active power vs Frequence histogramm
 #
 library(readr)
 

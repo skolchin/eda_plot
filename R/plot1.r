@@ -1,6 +1,6 @@
 #
 # Coursera Explanatory Data Analysis week 1 assignment
-# Plot 1. Global active power vs Frequence histogramm
+# Plot 1. Global active power vs Frequence histogramm.
 #
 library(readr)
 
@@ -11,7 +11,7 @@ rdata <- read_delim(
   col_types = cols(
     col_date(format = "%d/%m/%Y"),
     col_time(),
-    col_double(),
+    col_double(), 
     col_double(),
     col_double(),
     col_double(),
